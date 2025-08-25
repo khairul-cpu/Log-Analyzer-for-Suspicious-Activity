@@ -14,3 +14,6 @@ Features:
 3) Simple CLI tool – run it on any log file.
 4) Extensible with your own detection rules.
 5) Open source & beginner-friendly.
+
+
+you may download the sample log and test it later with the python script :)
