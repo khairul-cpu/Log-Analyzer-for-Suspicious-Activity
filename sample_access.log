@@ -1,0 +1,21 @@
+192.168.1.5 - - [25/Aug/2025:10:12:01 +0000] "GET /index.html HTTP/1.1" 200 4523 "-" "Mozilla/5.0"
+192.168.1.5 - - [25/Aug/2025:10:12:05 +0000] "GET /about.html HTTP/1.1" 200 2890 "-" "Mozilla/5.0"
+
+# Brute force attempts (multiple failed logins from same IP)
+203.0.113.55 - - [25/Aug/2025:10:13:11 +0000] "POST /login.php HTTP/1.1" 401 534 "-" "Mozilla/5.0"
+203.0.113.55 - - [25/Aug/2025:10:13:12 +0000] "POST /login.php HTTP/1.1" 401 534 "-" "Mozilla/5.0"
+203.0.113.55 - - [25/Aug/2025:10:13:14 +0000] "POST /login.php HTTP/1.1" 401 534 "-" "Mozilla/5.0"
+203.0.113.55 - - [25/Aug/2025:10:13:16 +0000] "POST /login.php HTTP/1.1" 403 534 "-" "Mozilla/5.0"
+
+# SQL Injection attempts
+198.51.100.23 - - [25/Aug/2025:10:14:01 +0000] "GET /product.php?id=1%20UNION%20SELECT%20*%20FROM%20users HTTP/1.1" 200 512 "-" "Mozilla/5.0"
+198.51.100.23 - - [25/Aug/2025:10:14:02 +0000] "GET /product.php?id=5%20OR%201=1-- HTTP/1.1" 200 412 "-" "Mozilla/5.0"
+
+# Another brute force attacker
+203.0.113.77 - - [25/Aug/2025:10:15:11 +0000] "POST /admin HTTP/1.1" 401 210 "-" "Mozilla/5.0"
+203.0.113.77 - - [25/Aug/2025:10:15:15 +0000] "POST /admin HTTP/1.1" 401 210 "-" "Mozilla/5.0"
+203.0.113.77 - - [25/Aug/2025:10:15:20 +0000] "POST /admin HTTP/1.1" 401 210 "-" "Mozilla/5.0"
+203.0.113.77 - - [25/Aug/2025:10:15:25 +0000] "POST /admin HTTP/1.1" 403 210 "-" "Mozilla/5.0"
+
+# Normal browsing again
+192.168.1.10 - - [25/Aug/2025:10:16:01 +0000] "GET /contact.html HTTP/1.1" 200 1423 "-" "Mozilla/5.0"
