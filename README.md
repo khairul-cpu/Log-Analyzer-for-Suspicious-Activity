@@ -8,10 +8,9 @@ A lightweight Python tool to analyze Apache/Nginx access logs for suspicious act
 
 This project is designed for defenders, SOC analysts, and students who want to quickly detect common attack behaviors in server logs.
 
-Features
-
-Detects repeated failed login attempts (brute force indicator).
-Identifies common SQL injection payloads in request URLs.
-Simple CLI tool – run it on any log file.
-Extensible with your own detection rules.
-Open source & beginner-friendly.
+Features:
+1) Detects repeated failed login attempts (brute force indicator).
+2) Identifies common SQL injection payloads in request URLs.
+3) Simple CLI tool – run it on any log file.
+4) Extensible with your own detection rules.
+5) Open source & beginner-friendly.
