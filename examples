@@ -1,0 +1,2 @@
+the following is the format on how would you use the script:
+python analyzer.py examples/sample_access.log
